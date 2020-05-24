@@ -15,6 +15,8 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import { NgxEchartsModule } from 'ngx-echarts';
 import * as echarts from 'echarts';
 
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import * as echarts from 'echarts';
     GoogleChartsModule,
     NgxEchartsModule.forRoot({
       echarts
-    })
+    }),
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
