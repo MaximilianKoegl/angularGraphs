@@ -1,0 +1,23 @@
+<div class="navbar">
+
+  <div class="pages">
+    <button *ngFor="let library of libraries"
+            [routerLink]="library.path"
+            (click)="onLibraryClicked(library.path)"
+            [ngClass]="{'selected' : library.path == selectedLibrary}"
+    >
+      {{ library.title }}
+    </button>
+  </div>
+
+  <div class="graphs">
+    <button (click)="onGraphClicked(graph)"
+            *ngFor="let graph of graphs"
+            [ngClass]="{'selected' : graph == selectedGraph}"
+    >
+      {{ graph }}
+    </button>
+  </div>
+
+</div>
+
